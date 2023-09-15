@@ -11,8 +11,20 @@ const onRequest = (request, response) => {
     case '/':
       htmlHandler.getIndex(request, response);
       break;
+    case '/page2':
+      htmlHandler.getIndex2(request, response);
+      break;
+    case '/page3':
+      htmlHandler.getIndex3(request, response);
+      break;
     case '/party.mp4':
-      mediaHandler.getParty(request, response);
+      mediaHandler.getMedia(request, response, 'video/mp4');
+      break;
+    case '/bling.mp3':
+      mediaHandler.getMedia(request, response, 'audio/mpeg');
+      break;
+    case '/bird.mp4':
+      mediaHandler.getMedia(request, response, 'video/mp4');
       break;
     default:
       htmlHandler.getIndex(request, response);
